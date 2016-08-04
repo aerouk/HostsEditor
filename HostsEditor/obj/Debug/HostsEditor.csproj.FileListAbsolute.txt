@@ -1,0 +1,11 @@
+c:\users\tom\documents\visual studio 2015\Projects\HostsEditor\HostsEditor\bin\Debug\HostsEditor.exe.config
+c:\users\tom\documents\visual studio 2015\Projects\HostsEditor\HostsEditor\bin\Debug\HostsEditor.exe
+c:\users\tom\documents\visual studio 2015\Projects\HostsEditor\HostsEditor\bin\Debug\HostsEditor.pdb
+c:\users\tom\documents\visual studio 2015\Projects\HostsEditor\HostsEditor\obj\Debug\HostsEditor.csprojResolveAssemblyReference.cache
+c:\users\tom\documents\visual studio 2015\Projects\HostsEditor\HostsEditor\obj\Debug\HostsEditor.Properties.Resources.resources
+c:\users\tom\documents\visual studio 2015\Projects\HostsEditor\HostsEditor\obj\Debug\HostsEditor.csproj.GenerateResource.Cache
+c:\users\tom\documents\visual studio 2015\Projects\HostsEditor\HostsEditor\obj\Debug\HostsEditor.exe
+c:\users\tom\documents\visual studio 2015\Projects\HostsEditor\HostsEditor\obj\Debug\HostsEditor.pdb
+c:\users\tom\documents\visual studio 2015\Projects\HostsEditor\HostsEditor\obj\Debug\HostsEditor.MainWindow.resources
+c:\users\tom\documents\visual studio 2015\Projects\HostsEditor\HostsEditor\bin\Debug\System.Net.Http.dll
+c:\users\tom\documents\visual studio 2015\Projects\HostsEditor\HostsEditor\bin\Debug\System.Net.Http.xml
