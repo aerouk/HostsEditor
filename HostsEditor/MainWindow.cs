@@ -7,13 +7,13 @@ namespace HostsEditor
 {
     public partial class MainWindow : Form
     {
-        public List<string> lines { get; set; }
+        public List<HostRow> hosts { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
 
-            lines = new List<string>();
+            hosts = new List<HostRow>();
         }
 
         //       METHODS        //
@@ -28,7 +28,7 @@ namespace HostsEditor
             ReadLinesIntoFile();
             PopulateGrid();
 
-            CountLabel.Text = "Host entries loaded: " + lines.Count.ToString();
+            CountLabel.Text = "Host entries loaded: ";
         }
 
         private void ReadLinesIntoFile()
@@ -36,14 +36,14 @@ namespace HostsEditor
             FileHelper fileHelper = new FileHelper();
 
             fileHelper.LoadLinesIntoList(); // load lines from hosts file into fh var
-            lines = fileHelper.lines; // pass var over here
+            hosts = fileHelper.hosts;
         }
 
         private void PopulateGrid()
         {
-            foreach (string line in lines)
+            foreach (HostRow hostRow in hosts)
             {
-                string[] entry = line.Split(new char[] {' ', '\t'}, 2);
+                string[] entry = {hostRow.ip, hostRow.host};
 
                 HostsGrid.Rows.Add(entry);
             }
@@ -87,6 +87,14 @@ namespace HostsEditor
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BeginExit();
+        }
+
+        private void HostsGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView senderGrid = (DataGridView)sender;
+            DataGridViewCell cell = senderGrid.Rows[e.RowIndex].Cells[e.ColumnIndex];
+
+            Console.WriteLine(cell.Value.ToString());
         }
 
         // ################### //

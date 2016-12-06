@@ -43,7 +43,7 @@
             this.checkForUpdatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hosts = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.host = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.HostsGrid)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -56,11 +56,12 @@
             this.HostsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.HostsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ip,
-            this.hosts});
+            this.host});
             this.HostsGrid.Location = new System.Drawing.Point(13, 27);
             this.HostsGrid.Name = "HostsGrid";
             this.HostsGrid.Size = new System.Drawing.Size(609, 360);
             this.HostsGrid.TabIndex = 0;
+            this.HostsGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.HostsGrid_CellDoubleClick);
             // 
             // EditButton
             // 
@@ -179,11 +180,11 @@
             this.ip.HeaderText = "IP Address";
             this.ip.Name = "ip";
             // 
-            // hosts
+            // host
             // 
-            this.hosts.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.hosts.HeaderText = "Hostname(s)";
-            this.hosts.Name = "hosts";
+            this.host.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.host.HeaderText = "Hostname";
+            this.host.Name = "host";
             // 
             // MainWindow
             // 
@@ -226,7 +227,7 @@
         private System.Windows.Forms.ToolStripMenuItem checkForUpdatesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn ip;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hosts;
+        private System.Windows.Forms.DataGridViewTextBoxColumn host;
     }
 }
 

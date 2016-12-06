@@ -4,16 +4,17 @@ namespace HostsEditor.Utils
 {
     class FileHelper
     {
-        public List<string> lines { get; set; }
+        public List<HostRow> hosts { get; set; }
 
         public FileHelper()
         {
-            lines = new List<string>();
+            hosts = new List<HostRow>();
         }
 
         public void LoadLinesIntoList()
         {
             string line;
+            int index = 0;
             System.IO.StreamReader file = new System.IO.StreamReader(@"c:\windows\system32\drivers\etc\hosts");
 
             while ((line = file.ReadLine()) != null)
@@ -22,8 +23,12 @@ namespace HostsEditor.Utils
 
                 if (line.Length > 0 && line.ToCharArray()[0] != '#')
                 {
-                    lines.Add(line);
+                    string[] lineContent = line.Split(new char[] { ' ', '\t' }, 2);
+
+                    hosts.Add(new HostRow(index, lineContent[0], lineContent[1]));
                 }
+
+                index++;
             }
 
             file.Close();
