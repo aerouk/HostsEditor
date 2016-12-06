@@ -28,15 +28,15 @@ namespace HostsEditor
             ReadLinesIntoFile();
             PopulateGrid();
 
-            CountLabel.Text = "Host entries loaded: ";
+            CountLabel.Text = "Host entries loaded: " + hosts.Count.ToString();
         }
 
         private void ReadLinesIntoFile()
         {
-            FileHelper fileHelper = new FileHelper();
+            DataLoader dataLoader = new DataLoader();
 
-            fileHelper.LoadLinesIntoList(); // load lines from hosts file into fh var
-            hosts = fileHelper.hosts;
+            dataLoader.LoadHostsFromFile(); // load lines from hosts file into fh var
+            hosts = dataLoader.hosts;
         }
 
         private void PopulateGrid()
@@ -94,7 +94,7 @@ namespace HostsEditor
             DataGridView senderGrid = (DataGridView)sender;
             DataGridViewCell cell = senderGrid.Rows[e.RowIndex].Cells[e.ColumnIndex];
 
-            Console.WriteLine(cell.Value.ToString());
+            Console.WriteLine(cell.Value.ToString() + " " + hosts[cell.RowIndex].fileRow);
         }
 
         // ################### //
