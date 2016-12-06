@@ -17,6 +17,8 @@ namespace HostsEditor.Utils
         {
             var lines = File.ReadAllLines(Environment.SystemDirectory + @"\drivers\etc\hosts");
 
+            hosts.Clear();
+
             for (int i = 0; i < lines.Length; i++)
             {
                 var line = lines[i].Trim();

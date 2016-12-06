@@ -15,7 +15,6 @@ namespace HostsEditor
             InitializeComponent();
 
             dataLoader = new DataLoader();
-            hosts = new List<HostRow>();
 
             PrepareView();
             PopulateGrid();
@@ -33,6 +32,8 @@ namespace HostsEditor
 
             hosts = dataLoader.hosts;
             CountLabel.Text = "Host entries loaded: " + hosts.Count.ToString();
+
+            PopulateGrid();
         }
 
         private void PopulateGrid()
