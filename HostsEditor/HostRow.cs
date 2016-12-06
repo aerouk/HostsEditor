@@ -11,7 +11,7 @@
             this.fileRow = fileRow;
             this.ip = ip;
             this.host = host;
-        }  
+        }
 
         public HostRow(int fileRow, string hostString)
         {
