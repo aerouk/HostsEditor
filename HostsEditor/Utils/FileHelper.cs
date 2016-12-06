@@ -1,22 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace HostsEditor.Utils
 {
     class FileHelper
     {
-        public List<string> lines = new List<string>();
-        public int counter = 0;
+        public List<string> lines { get; set; }
 
-        public void loadLinesIntoList()
+        public FileHelper()
         {
-            counter = 0;
-            string line;
+            lines = new List<string>();
+        }
 
+        public void LoadLinesIntoList()
+        {
+            string line;
             System.IO.StreamReader file = new System.IO.StreamReader(@"c:\windows\system32\drivers\etc\hosts");
+
             while ((line = file.ReadLine()) != null)
             {
                 line = line.Trim();
@@ -24,7 +23,6 @@ namespace HostsEditor.Utils
                 if (line.Length > 0 && line.ToCharArray()[0] != '#')
                 {
                     lines.Add(line);
-                    counter++;
                 }
             }
 

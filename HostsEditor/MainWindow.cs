@@ -1,71 +1,73 @@
-﻿using System;
+﻿using HostsEditor.Utils;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HostsEditor
 {
     public partial class MainWindow : Form
     {
-        public List<string> lines = new List<string>();
+        private List<string> lines { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
+            HostsGrid.Columns.Add("ip", "IP Address");
+            HostsGrid.Columns.Add("hosts", "Hostname(s)");
+
+            lines = new List<string>();
         }
 
         //       METHODS        //
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
-            prepareView();
+            PrepareView();
         }
 
-        void prepareView()
+        private void PrepareView()
         {
-            readLinesIntoFile();
-            populateGrid();
+            ReadLinesIntoFile();
+            PopulateGrid();
 
             CountLabel.Text = "Host entries loaded: " + lines.Count.ToString();
         }
 
-        void readLinesIntoFile()
+        private void ReadLinesIntoFile()
         {
-            Utils.FileHelper fh = new Utils.FileHelper();
+            FileHelper fileHelper = new FileHelper();
 
-            fh.loadLinesIntoList(); // load lines from hosts file into fh var
-
-            lines = fh.lines; // pass var over here
+            fileHelper.LoadLinesIntoList(); // load lines from hosts file into fh var
+            lines = fileHelper.lines; // pass var over here
         }
 
-        void populateGrid()
+        private void PopulateGrid()
         {
-            HostsGrid.Columns.Add("ip", "IP Address");
-            HostsGrid.Columns.Add("hosts", "Hostname(s)");
-
             foreach (string line in lines)
             {
-                string[] entry = line.Split(new char[] { ' ', '	'}, 2);
+                string[] entry = line.Split(new char[] {' ', '\t'}, 2);
 
                 HostsGrid.Rows.Add(entry);
             }
 
             HostsGrid.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
             HostsGrid.AutoResizeColumns();
         }
 
-        void clearGrid()
+        private void ClearGrid()
         {
             HostsGrid.Rows.Clear();
             HostsGrid.Refresh();
 
-            prepareView();
+            PrepareView();
+        }
+
+        private void BeginExit()
+        {
+            DialogResult exitDialogResult = MessageBox.Show("Are you sure you would like to exit?", "Exit application", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+            if (exitDialogResult == DialogResult.Yes)
+                Application.Exit();
         }
 
         // INTERACTIVE CONTROLS //
@@ -77,12 +79,17 @@ namespace HostsEditor
 
         private void ReloadButton_Click(object sender, EventArgs e)
         {
-
+            ClearGrid();
         }
 
         private void CLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/aerouk/HostsEditor");
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BeginExit();
         }
 
         // ################### //
