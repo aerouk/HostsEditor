@@ -71,7 +71,7 @@ namespace HostsEditor
 
         private void EditButton_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("notepad.exe", "c:\\windows\\system32\\drivers\\etc\\hosts");
+            System.Diagnostics.Process.Start("notepad.exe", Environment.SystemDirectory + @"\drivers\etc\hosts");
         }
 
         private void ReloadButton_Click(object sender, EventArgs e)
