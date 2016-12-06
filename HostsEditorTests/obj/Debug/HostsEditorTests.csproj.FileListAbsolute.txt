@@ -1,0 +1,9 @@
+C:\Users\Tom\Documents\Visual Studio 2015\Projects\HostsEditor\HostsEditorTests\bin\Debug\HostsEditorTests.dll
+C:\Users\Tom\Documents\Visual Studio 2015\Projects\HostsEditor\HostsEditorTests\bin\Debug\HostsEditorTests.pdb
+C:\Users\Tom\Documents\Visual Studio 2015\Projects\HostsEditor\HostsEditorTests\bin\Debug\HostsEditor.exe
+C:\Users\Tom\Documents\Visual Studio 2015\Projects\HostsEditor\HostsEditorTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Tom\Documents\Visual Studio 2015\Projects\HostsEditor\HostsEditorTests\bin\Debug\HostsEditor.pdb
+C:\Users\Tom\Documents\Visual Studio 2015\Projects\HostsEditor\HostsEditorTests\obj\Debug\HostsEditorTests.csprojResolveAssemblyReference.cache
+C:\Users\Tom\Documents\Visual Studio 2015\Projects\HostsEditor\HostsEditorTests\obj\Debug\HostsEditorTests.dll
+C:\Users\Tom\Documents\Visual Studio 2015\Projects\HostsEditor\HostsEditorTests\obj\Debug\HostsEditorTests.pdb
+C:\Users\Tom\Documents\Visual Studio 2015\Projects\HostsEditor\HostsEditorTests\bin\Debug\hostsTestData.txt
