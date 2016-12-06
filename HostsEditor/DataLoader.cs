@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace HostsEditor.Utils
 {
@@ -13,25 +15,15 @@ namespace HostsEditor.Utils
 
         public void LoadHostsFromFile()
         {
-            string line;
-            int index = 0;
-            System.IO.StreamReader file = new System.IO.StreamReader(@"c:\windows\system32\drivers\etc\hosts");
+            var lines = File.ReadAllLines(Environment.SystemDirectory + @"\drivers\etc\hosts");
 
-            while ((line = file.ReadLine()) != null)
+            for (int i = 0; i < lines.Length; i++)
             {
-                line = line.Trim();
+                var line = lines[i].Trim();
 
-                if (line.Length > 0 && line.ToCharArray()[0] != '#')
-                {
-                    string[] lineContent = line.Split(new char[] { ' ', '\t' }, 2);
-
-                    hosts.Add(new HostRow(index, lineContent[0], lineContent[1]));
-                }
-
-                index++;
+                if (line.Length > 0 && !line.StartsWith("#"))
+                    hosts.Add(new HostRow(i, line));
             }
-
-            file.Close();
         }
     }
 }

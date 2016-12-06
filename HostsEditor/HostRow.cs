@@ -17,5 +17,14 @@ namespace HostsEditor
             this.ip = ip;
             this.host = host;
         }  
+
+        public HostRow(int fileRow, string hostString)
+        {
+            var lineContent = hostString.Split(new char[] { ' ', '\t' }, 2);
+
+            this.fileRow = fileRow;
+            ip = lineContent[0];
+            host = lineContent[1];
+        }
     }
 }
