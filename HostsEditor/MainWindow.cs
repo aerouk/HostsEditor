@@ -7,7 +7,7 @@ namespace HostsEditor
 {
     public partial class MainWindow : Form
     {
-        private List<string> lines { get; set; }
+        public List<string> lines { get; set; }
 
         public MainWindow()
         {
