@@ -1,4 +1,6 @@
 ﻿#
 127.0.0.1 iaero.me.local
 127.1.1.1    iaero.me.dev
+127.66.6.6	iaero.local
+127.4.5.6	   	iaero.local.2
 

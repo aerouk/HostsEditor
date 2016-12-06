@@ -19,6 +19,12 @@ namespace HostsEditor.Utils.Tests
             Assert.AreEqual(2, dataLoader.hosts[1].fileRow);
             Assert.AreEqual("127.1.1.1", dataLoader.hosts[1].ip);
             Assert.AreEqual("iaero.me.dev", dataLoader.hosts[1].host);
+            Assert.AreEqual(3, dataLoader.hosts[2].fileRow);
+            Assert.AreEqual("127.66.6.6", dataLoader.hosts[2].ip);
+            Assert.AreEqual("iaero.local", dataLoader.hosts[2].host);
+            Assert.AreEqual(4, dataLoader.hosts[3].fileRow);
+            Assert.AreEqual("127.4.5.6", dataLoader.hosts[3].ip);
+            Assert.AreEqual("iaero.local.2", dataLoader.hosts[3].host);
         }
     }
 }
