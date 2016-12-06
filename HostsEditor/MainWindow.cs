@@ -12,8 +12,6 @@ namespace HostsEditor
         public MainWindow()
         {
             InitializeComponent();
-            HostsGrid.Columns.Add("ip", "IP Address");
-            HostsGrid.Columns.Add("hosts", "Hostname(s)");
 
             lines = new List<string>();
         }
@@ -50,7 +48,6 @@ namespace HostsEditor
                 HostsGrid.Rows.Add(entry);
             }
 
-            HostsGrid.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             HostsGrid.AutoResizeColumns();
         }
 
