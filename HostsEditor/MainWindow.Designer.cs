@@ -57,6 +57,7 @@
             this.HostsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ip,
             this.host});
+            this.HostsGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.HostsGrid.Location = new System.Drawing.Point(13, 27);
             this.HostsGrid.Name = "HostsGrid";
             this.HostsGrid.Size = new System.Drawing.Size(609, 360);
