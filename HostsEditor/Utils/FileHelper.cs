@@ -21,7 +21,7 @@ namespace HostsEditor.Utils
             {
                 line = line.Trim();
 
-                if (line[0] != '#')
+                if (line.Length > 0 && line.ToCharArray()[0] != '#')
                 {
                     lines.Add(line);
                     counter++;
