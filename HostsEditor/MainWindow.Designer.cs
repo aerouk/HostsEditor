@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.HostsGrid = new System.Windows.Forms.DataGridView();
+            this.ip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.host = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EditButton = new System.Windows.Forms.Button();
             this.CLabel = new System.Windows.Forms.LinkLabel();
             this.ReloadButton = new System.Windows.Forms.Button();
@@ -42,8 +44,6 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkForUpdatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.host = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.HostsGrid)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +63,17 @@
             this.HostsGrid.Size = new System.Drawing.Size(609, 360);
             this.HostsGrid.TabIndex = 0;
             this.HostsGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.HostsGrid_CellDoubleClick);
+            // 
+            // ip
+            // 
+            this.ip.HeaderText = "IP Address";
+            this.ip.Name = "ip";
+            // 
+            // host
+            // 
+            this.host.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.host.HeaderText = "Hostname";
+            this.host.Name = "host";
             // 
             // EditButton
             // 
@@ -176,17 +187,6 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
-            // ip
-            // 
-            this.ip.HeaderText = "IP Address";
-            this.ip.Name = "ip";
-            // 
-            // host
-            // 
-            this.host.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.host.HeaderText = "Hostname";
-            this.host.Name = "host";
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,7 +202,6 @@
             this.MinimumSize = new System.Drawing.Size(650, 463);
             this.Name = "MainWindow";
             this.Text = "Hosts File Editor";
-            this.Load += new System.EventHandler(this.MainWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HostsGrid)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

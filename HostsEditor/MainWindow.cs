@@ -22,10 +22,6 @@ namespace HostsEditor
 
         //       METHODS        //
 
-        private void MainWindow_Load(object sender, EventArgs e)
-        {
-        }
-
         private void PrepareView()
         {
             dataLoader.LoadHostsFromFile();
