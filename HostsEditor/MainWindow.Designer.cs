@@ -44,6 +44,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkForUpdatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newHostButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.HostsGrid)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -78,7 +79,7 @@
             // EditButton
             // 
             this.EditButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.EditButton.Location = new System.Drawing.Point(90, 393);
+            this.EditButton.Location = new System.Drawing.Point(200, 393);
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(103, 23);
             this.EditButton.TabIndex = 1;
@@ -101,7 +102,7 @@
             // ReloadButton
             // 
             this.ReloadButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ReloadButton.Location = new System.Drawing.Point(199, 393);
+            this.ReloadButton.Location = new System.Drawing.Point(308, 393);
             this.ReloadButton.Name = "ReloadButton";
             this.ReloadButton.Size = new System.Drawing.Size(103, 23);
             this.ReloadButton.TabIndex = 3;
@@ -113,7 +114,7 @@
             // 
             this.CountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.CountLabel.AutoSize = true;
-            this.CountLabel.Location = new System.Drawing.Point(309, 397);
+            this.CountLabel.Location = new System.Drawing.Point(418, 397);
             this.CountLabel.Name = "CountLabel";
             this.CountLabel.Size = new System.Drawing.Size(85, 13);
             this.CountLabel.TabIndex = 4;
@@ -187,11 +188,23 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
+            // newHostButton
+            // 
+            this.newHostButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.newHostButton.Location = new System.Drawing.Point(91, 393);
+            this.newHostButton.Name = "newHostButton";
+            this.newHostButton.Size = new System.Drawing.Size(103, 23);
+            this.newHostButton.TabIndex = 6;
+            this.newHostButton.Text = "Add New Host";
+            this.newHostButton.UseVisualStyleBackColor = true;
+            this.newHostButton.Click += new System.EventHandler(this.newHostButton_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 424);
+            this.Controls.Add(this.newHostButton);
             this.Controls.Add(this.CountLabel);
             this.Controls.Add(this.ReloadButton);
             this.Controls.Add(this.CLabel);
@@ -228,6 +241,7 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn ip;
         private System.Windows.Forms.DataGridViewTextBoxColumn host;
+        private System.Windows.Forms.Button newHostButton;
     }
 }
 

@@ -90,6 +90,11 @@ namespace HostsEditor
             Console.WriteLine(cell.Value.ToString() + " " + hosts[cell.RowIndex].fileRow);
         }
 
+        private void newHostButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
         // ################### //
     }
 }

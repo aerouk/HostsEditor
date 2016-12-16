@@ -29,5 +29,20 @@ namespace HostsEditor.Utils
                     hosts.Add(new HostRow(i, line));
             }
         }
+
+        public bool AddHostToFile(string ip, string host)
+        {
+            try
+            {
+                File.AppendAllText(path, $"{ip} {host}" + Environment.NewLine);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+                return false;
+            }
+
+            return true;
+        }
     }
 }
