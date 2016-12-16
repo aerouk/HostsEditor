@@ -31,10 +31,11 @@ namespace HostsEditor.Utils.Tests
         public void AddHostToFileTest()
         {
             DataLoader dataLoader = new DataLoader();
+            HostRow testData = new HostRow(0, "127.0.3.1 test.data");
 
             dataLoader.path = "hostsTestData.txt";
 
-            Assert.IsTrue(dataLoader.AddHostToFile("127.0.3.1", "test.data"));
+            Assert.IsTrue(dataLoader.AddHostToFile(testData));
         }
     }
 }
