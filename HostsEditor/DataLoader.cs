@@ -32,6 +32,7 @@ namespace HostsEditor.Utils
 
         public bool AddHostToFile(string ip, string host)
         {
+            // should we validate host&ip here?
             try
             {
                 File.AppendAllText(path, $"{ip} {host}" + Environment.NewLine);

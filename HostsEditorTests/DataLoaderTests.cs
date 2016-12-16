@@ -26,5 +26,15 @@ namespace HostsEditor.Utils.Tests
             Assert.AreEqual("127.4.5.6", dataLoader.hosts[3].ip);
             Assert.AreEqual("iaero.local.2", dataLoader.hosts[3].host);
         }
+
+        [TestMethod()]
+        public void AddHostToFileTest()
+        {
+            DataLoader dataLoader = new DataLoader();
+
+            dataLoader.path = "hostsTestData.txt";
+
+            Assert.IsTrue(dataLoader.AddHostToFile("127.0.3.1", "test.data"));
+        }
     }
 }
