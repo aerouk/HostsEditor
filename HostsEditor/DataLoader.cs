@@ -30,12 +30,12 @@ namespace HostsEditor.Utils
             }
         }
 
-        public bool AddHostToFile(string ip, string host)
+        public bool AddHostToFile(HostRow hostRow)
         {
             // should we validate host&ip here?
             try
             {
-                File.AppendAllText(path, $"{ip} {host}" + Environment.NewLine);
+                File.AppendAllText(path, $"{hostRow.ip} {hostRow.host}" + Environment.NewLine);
             }
             catch (Exception e)
             {
