@@ -17,7 +17,6 @@ namespace HostsEditor
             dataManager = new DataManager();
 
             PrepareView();
-            PopulateGrid();
         }
 
         //       METHODS        //
@@ -104,7 +103,10 @@ namespace HostsEditor
 
         private void NewHostButton_Click(object sender, EventArgs e)
         {
+            NewHostWindow newHostWindow = new NewHostWindow(dataManager);
 
+            newHostWindow.ShowDialog(this);
+            ReloadGrid(); // reload grid after dialog is closed
         }
 
         // ################### //

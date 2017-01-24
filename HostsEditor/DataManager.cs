@@ -43,7 +43,6 @@ namespace HostsEditor.Utils
         /// <returns>Whether the new host could be added to the file or not.</returns>
         public bool AddHostToFile(HostRow hostRow)
         {
-            // should we validate host&ip here?
             try
             {
                 File.AppendAllText(path, $"{hostRow.IP} {hostRow.Host}" + Environment.NewLine);
