@@ -7,8 +7,8 @@ namespace HostsEditor
 {
     public partial class MainWindow : Form
     {
+        public List<HostRow> Hosts { get; set; }
         private DataLoader dataLoader;
-        public List<HostRow> hosts { get; set; }
 
         public MainWindow()
         {
@@ -26,17 +26,17 @@ namespace HostsEditor
         {
             dataLoader.LoadHostsFromFile();
 
-            hosts = dataLoader.hosts;
-            CountLabel.Text = "Host entries loaded: " + hosts.Count.ToString();
+            Hosts = dataLoader.Hosts;
+            CountLabel.Text = "Host entries loaded: " + Hosts.Count.ToString();
 
             PopulateGrid();
         }
 
         private void PopulateGrid()
         {
-            foreach (HostRow hostRow in hosts)
+            foreach (HostRow hostRow in Hosts)
             {
-                string[] entry = {hostRow.ip, hostRow.host};
+                string[] entry = {hostRow.IP, hostRow.Host};
 
                 HostsGrid.Rows.Add(entry);
             }
@@ -77,7 +77,7 @@ namespace HostsEditor
             System.Diagnostics.Process.Start("https://github.com/aerouk/HostsEditor");
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BeginExit();
         }
@@ -87,10 +87,10 @@ namespace HostsEditor
             DataGridView senderGrid = (DataGridView)sender;
             DataGridViewCell cell = senderGrid.Rows[e.RowIndex].Cells[e.ColumnIndex];
 
-            Console.WriteLine(cell.Value.ToString() + " " + hosts[cell.RowIndex].fileRow);
+            Console.WriteLine(cell.Value.ToString() + " " + Hosts[cell.RowIndex].FileRow);
         }
 
-        private void newHostButton_Click(object sender, EventArgs e)
+        private void NewHostButton_Click(object sender, EventArgs e)
         {
 
         }

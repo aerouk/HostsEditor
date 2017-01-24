@@ -7,26 +7,26 @@ namespace HostsEditor.Utils
 {
     public class DataLoader
     {
-        public List<HostRow> hosts { get; set; }
+        public List<HostRow> Hosts { get; set; }
         public string path = Environment.SystemDirectory + @"\drivers\etc\hosts";
 
         public DataLoader()
         {
-            hosts = new List<HostRow>();
+            Hosts = new List<HostRow>();
         }
 
         public void LoadHostsFromFile()
         {
             var lines = File.ReadAllLines(path);
 
-            hosts.Clear();
+            Hosts.Clear();
 
             for (int i = 0; i < lines.Length; i++)
             {
                 var line = Regex.Replace(lines[i].Trim(), @"\s+", " ");
 
                 if (line.Length > 0 && !line.StartsWith("#"))
-                    hosts.Add(new HostRow(i, line));
+                    Hosts.Add(new HostRow(i, line));
             }
         }
 
@@ -35,7 +35,7 @@ namespace HostsEditor.Utils
             // should we validate host&ip here?
             try
             {
-                File.AppendAllText(path, $"{hostRow.ip} {hostRow.host}" + Environment.NewLine);
+                File.AppendAllText(path, $"{hostRow.IP} {hostRow.Host}" + Environment.NewLine);
             }
             catch (Exception e)
             {

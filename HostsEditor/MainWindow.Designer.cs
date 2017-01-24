@@ -35,18 +35,18 @@
             this.CLabel = new System.Windows.Forms.LinkLabel();
             this.ReloadButton = new System.Windows.Forms.Button();
             this.CountLabel = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkForUpdatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newHostButton = new System.Windows.Forms.Button();
+            this.MenuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.EditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CheckForUpdatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.NewHostButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.HostsGrid)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            this.MenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // HostsGrid
@@ -120,104 +120,104 @@
             this.CountLabel.TabIndex = 4;
             this.CountLabel.Text = "Pending count...";
             // 
-            // menuStrip1
+            // MenuStrip1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.viewToolStripMenuItem,
-            this.toolsToolStripMenuItem,
-            this.helpToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(634, 24);
-            this.menuStrip1.TabIndex = 5;
-            this.menuStrip1.Text = "menuStrip1";
+            this.MenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FileToolStripMenuItem,
+            this.EditToolStripMenuItem,
+            this.ViewToolStripMenuItem,
+            this.ToolsToolStripMenuItem,
+            this.HelpToolStripMenuItem});
+            this.MenuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.MenuStrip1.Name = "MenuStrip1";
+            this.MenuStrip1.Size = new System.Drawing.Size(634, 24);
+            this.MenuStrip1.TabIndex = 5;
+            this.MenuStrip1.Text = "menuStrip1";
             // 
-            // fileToolStripMenuItem
+            // FileToolStripMenuItem
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
+            this.FileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ExitToolStripMenuItem});
+            this.FileToolStripMenuItem.Name = "FileToolStripMenuItem";
+            this.FileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.FileToolStripMenuItem.Text = "File";
             // 
-            // exitToolStripMenuItem
+            // ExitToolStripMenuItem
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
+            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ExitToolStripMenuItem.Text = "Exit";
+            this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
-            // editToolStripMenuItem
+            // EditToolStripMenuItem
             // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.editToolStripMenuItem.Text = "Edit";
+            this.EditToolStripMenuItem.Name = "EditToolStripMenuItem";
+            this.EditToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.EditToolStripMenuItem.Text = "Edit";
             // 
-            // viewToolStripMenuItem
+            // ViewToolStripMenuItem
             // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.viewToolStripMenuItem.Text = "View";
+            this.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem";
+            this.ViewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.ViewToolStripMenuItem.Text = "View";
             // 
-            // toolsToolStripMenuItem
+            // ToolsToolStripMenuItem
             // 
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.toolsToolStripMenuItem.Text = "Tools";
+            this.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem";
+            this.ToolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.ToolsToolStripMenuItem.Text = "Tools";
             // 
-            // helpToolStripMenuItem
+            // HelpToolStripMenuItem
             // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.checkForUpdatesToolStripMenuItem,
-            this.aboutToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
+            this.HelpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CheckForUpdatesToolStripMenuItem,
+            this.AboutToolStripMenuItem});
+            this.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
+            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.HelpToolStripMenuItem.Text = "Help";
             // 
-            // checkForUpdatesToolStripMenuItem
+            // CheckForUpdatesToolStripMenuItem
             // 
-            this.checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem";
-            this.checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.checkForUpdatesToolStripMenuItem.Text = "Check for Updates";
+            this.CheckForUpdatesToolStripMenuItem.Name = "CheckForUpdatesToolStripMenuItem";
+            this.CheckForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.CheckForUpdatesToolStripMenuItem.Text = "Check for Updates";
             // 
-            // aboutToolStripMenuItem
+            // AboutToolStripMenuItem
             // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.aboutToolStripMenuItem.Text = "About";
+            this.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem";
+            this.AboutToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.AboutToolStripMenuItem.Text = "About";
             // 
-            // newHostButton
+            // NewHostButton
             // 
-            this.newHostButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.newHostButton.Location = new System.Drawing.Point(91, 393);
-            this.newHostButton.Name = "newHostButton";
-            this.newHostButton.Size = new System.Drawing.Size(103, 23);
-            this.newHostButton.TabIndex = 6;
-            this.newHostButton.Text = "Add New Host";
-            this.newHostButton.UseVisualStyleBackColor = true;
-            this.newHostButton.Click += new System.EventHandler(this.newHostButton_Click);
+            this.NewHostButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.NewHostButton.Location = new System.Drawing.Point(91, 393);
+            this.NewHostButton.Name = "NewHostButton";
+            this.NewHostButton.Size = new System.Drawing.Size(103, 23);
+            this.NewHostButton.TabIndex = 6;
+            this.NewHostButton.Text = "Add New Host";
+            this.NewHostButton.UseVisualStyleBackColor = true;
+            this.NewHostButton.Click += new System.EventHandler(this.NewHostButton_Click);
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 424);
-            this.Controls.Add(this.newHostButton);
+            this.Controls.Add(this.NewHostButton);
             this.Controls.Add(this.CountLabel);
             this.Controls.Add(this.ReloadButton);
             this.Controls.Add(this.CLabel);
             this.Controls.Add(this.EditButton);
             this.Controls.Add(this.HostsGrid);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.MenuStrip1);
+            this.MainMenuStrip = this.MenuStrip1;
             this.MinimumSize = new System.Drawing.Size(650, 463);
             this.Name = "MainWindow";
             this.Text = "Hosts File Editor";
             ((System.ComponentModel.ISupportInitialize)(this.HostsGrid)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.MenuStrip1.ResumeLayout(false);
+            this.MenuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,18 +230,18 @@
         private System.Windows.Forms.LinkLabel CLabel;
         private System.Windows.Forms.Button ReloadButton;
         private System.Windows.Forms.Label CountLabel;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem checkForUpdatesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip MenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem FileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ExitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem EditToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ViewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem HelpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem CheckForUpdatesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AboutToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn ip;
         private System.Windows.Forms.DataGridViewTextBoxColumn host;
-        private System.Windows.Forms.Button newHostButton;
+        private System.Windows.Forms.Button NewHostButton;
     }
 }
 

@@ -7,3 +7,12 @@ C:\Users\Tom\Documents\Visual Studio 2015\Projects\HostsEditor\HostsEditorTests\
 C:\Users\Tom\Documents\Visual Studio 2015\Projects\HostsEditor\HostsEditorTests\obj\Debug\HostsEditorTests.dll
 C:\Users\Tom\Documents\Visual Studio 2015\Projects\HostsEditor\HostsEditorTests\obj\Debug\HostsEditorTests.pdb
 C:\Users\Tom\Documents\Visual Studio 2015\Projects\HostsEditor\HostsEditorTests\bin\Debug\hostsTestData.txt
+C:\dev\cs\HostsEditor\HostsEditorTests\bin\Debug\hostsTestData.txt
+C:\dev\cs\HostsEditor\HostsEditorTests\bin\Debug\HostsEditorTests.dll
+C:\dev\cs\HostsEditor\HostsEditorTests\bin\Debug\HostsEditorTests.pdb
+C:\dev\cs\HostsEditor\HostsEditorTests\bin\Debug\HostsEditor.exe
+C:\dev\cs\HostsEditor\HostsEditorTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\dev\cs\HostsEditor\HostsEditorTests\bin\Debug\HostsEditor.pdb
+C:\dev\cs\HostsEditor\HostsEditorTests\obj\Debug\HostsEditorTests.csprojResolveAssemblyReference.cache
+C:\dev\cs\HostsEditor\HostsEditorTests\obj\Debug\HostsEditorTests.dll
+C:\dev\cs\HostsEditor\HostsEditorTests\obj\Debug\HostsEditorTests.pdb

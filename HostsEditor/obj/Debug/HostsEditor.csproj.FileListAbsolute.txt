@@ -9,3 +9,12 @@ c:\users\tom\documents\visual studio 2015\Projects\HostsEditor\HostsEditor\obj\D
 c:\users\tom\documents\visual studio 2015\Projects\HostsEditor\HostsEditor\obj\Debug\HostsEditor.MainWindow.resources
 c:\users\tom\documents\visual studio 2015\Projects\HostsEditor\HostsEditor\bin\Debug\System.Net.Http.dll
 c:\users\tom\documents\visual studio 2015\Projects\HostsEditor\HostsEditor\bin\Debug\System.Net.Http.xml
+C:\dev\cs\HostsEditor\HostsEditor\bin\Debug\HostsEditor.exe.config
+C:\dev\cs\HostsEditor\HostsEditor\bin\Debug\HostsEditor.exe
+C:\dev\cs\HostsEditor\HostsEditor\bin\Debug\HostsEditor.pdb
+C:\dev\cs\HostsEditor\HostsEditor\obj\Debug\HostsEditor.csprojResolveAssemblyReference.cache
+C:\dev\cs\HostsEditor\HostsEditor\obj\Debug\HostsEditor.MainWindow.resources
+C:\dev\cs\HostsEditor\HostsEditor\obj\Debug\HostsEditor.Properties.Resources.resources
+C:\dev\cs\HostsEditor\HostsEditor\obj\Debug\HostsEditor.csproj.GenerateResource.Cache
+C:\dev\cs\HostsEditor\HostsEditor\obj\Debug\HostsEditor.exe
+C:\dev\cs\HostsEditor\HostsEditor\obj\Debug\HostsEditor.pdb
