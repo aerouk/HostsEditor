@@ -5,16 +5,22 @@ using System.Text.RegularExpressions;
 
 namespace HostsEditor.Utils
 {
-    public class DataLoader
+    /// <summary>
+    /// A data manager containing methods to load/save entries to/from the hosts file.
+    /// </summary>
+    public class DataManager
     {
         public List<HostRow> Hosts { get; set; }
         public string path = Environment.SystemDirectory + @"\drivers\etc\hosts";
 
-        public DataLoader()
+        public DataManager()
         {
             Hosts = new List<HostRow>();
         }
 
+        /// <summary>
+        /// Loads all hosts from the `hosts` file into the program.
+        /// </summary>
         public void LoadHostsFromFile()
         {
             var lines = File.ReadAllLines(path);
@@ -30,6 +36,11 @@ namespace HostsEditor.Utils
             }
         }
 
+        /// <summary>
+        /// Adds a new host into the `hosts` file.
+        /// </summary>
+        /// <param name="hostRow">A HostRow object containing the IP address and Hostname to add to the file</param>
+        /// <returns>Whether the new host could be added to the file or not.</returns>
         public bool AddHostToFile(HostRow hostRow)
         {
             // should we validate host&ip here?

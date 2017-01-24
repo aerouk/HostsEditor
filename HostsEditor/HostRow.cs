@@ -1,5 +1,8 @@
 ﻿namespace HostsEditor
 {
+    /// <summary>
+    /// Represents a hosts file entry, following the host line guidelines provided by Microsoft.
+    /// </summary>
     public class HostRow
     {
         public int FileRow { get; set; }
