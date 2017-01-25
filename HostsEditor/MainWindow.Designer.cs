@@ -48,6 +48,8 @@
             // 
             // HostsGrid
             // 
+            this.HostsGrid.AllowUserToAddRows = false;
+            this.HostsGrid.AllowUserToDeleteRows = false;
             this.HostsGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -58,6 +60,7 @@
             this.HostsGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.HostsGrid.Location = new System.Drawing.Point(13, 27);
             this.HostsGrid.Name = "HostsGrid";
+            this.HostsGrid.RowHeadersVisible = false;
             this.HostsGrid.Size = new System.Drawing.Size(609, 360);
             this.HostsGrid.TabIndex = 0;
             this.HostsGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.HostsGrid_CellDoubleClick);
