@@ -60,17 +60,6 @@ namespace HostsEditor
             PrepareView();
         }
 
-        /// <summary>
-        /// Prepares the program for exit, creating a confirmation box for the user.
-        /// </summary>
-        private void BeginExit()
-        {
-            DialogResult exitDialogResult = MessageBox.Show("Are you sure you would like to exit?", "Exit application", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-
-            if (exitDialogResult == DialogResult.Yes)
-                Application.Exit();
-        }
-
         // INTERACTIVE CONTROLS //
 
         private void EditButton_Click(object sender, EventArgs e)
@@ -90,7 +79,7 @@ namespace HostsEditor
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BeginExit();
+            Close();
         }
 
         private void HostsGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -107,6 +96,14 @@ namespace HostsEditor
 
             newHostWindow.ShowDialog(this);
             ReloadGrid(); // reload grid after dialog is closed
+        }
+
+        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult exitDialogResult = MessageBox.Show("Are you sure you would like to exit?", "Exit application", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+            if (exitDialogResult == DialogResult.No)
+                e.Cancel = true;
         }
 
         // ################### //
