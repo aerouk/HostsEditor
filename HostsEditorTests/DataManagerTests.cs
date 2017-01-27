@@ -45,5 +45,45 @@ namespace HostsEditor.Utils.Tests
 
             Assert.IsTrue(dataManager.AddHostToFile(testData));
         }
+
+        /// <summary>
+        /// Test to test updating line in the hosts file.
+        /// The test will pass if the program was able to update the row and the value is updated.
+        /// </summary>
+        [TestMethod()]
+        public void UpdateHostTest()
+        {
+            DataManager dataManager = new DataManager();
+            HostRow testData = new HostRow(1, "127.0.0.11", "iaero.me.local.test");
+
+            dataManager.path = "hostsTestData.txt";
+            dataManager.LoadHostsFromFile();
+
+            Assert.IsTrue(dataManager.UpdateHost(testData));
+
+            dataManager.LoadHostsFromFile();
+
+            Assert.AreEqual("127.0.0.11", dataManager.Hosts[0].IP);
+            Assert.AreEqual("iaero.me.local.test", dataManager.Hosts[0].Host);
+        }
+
+        /// <summary>
+        /// Test to test deleting line in the hosts file.
+        /// The test will pass if the program was able to delete the row.
+        /// </summary>
+        [TestMethod()]
+        public void DeleteHostTest()
+        {
+            DataManager dataManager = new DataManager();
+
+            dataManager.path = "hostsTestData.txt";
+            dataManager.LoadHostsFromFile();
+
+            Assert.IsTrue(dataManager.DeleteHost(1)); // delete host on line 2
+
+            dataManager.LoadHostsFromFile();
+
+            Assert.AreEqual("127.1.1.1", dataManager.Hosts[0].IP);
+        }
     }
 }
