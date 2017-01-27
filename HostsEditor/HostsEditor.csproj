@@ -76,6 +76,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataManager.cs" />
+    <Compile Include="Forms\EditHostWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditHostWindow.Designer.cs">
+      <DependentUpon>EditHostWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="HostRow.cs" />
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
@@ -83,18 +89,22 @@
     <Compile Include="MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewHostWindow.cs">
+    <Compile Include="Forms\NewHostWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewHostWindow.Designer.cs">
+    <Compile Include="Forms\NewHostWindow.Designer.cs">
       <DependentUpon>NewHostWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringHelper.cs" />
+    <EmbeddedResource Include="Forms\EditHostWindow.resx">
+      <DependentUpon>EditHostWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewHostWindow.resx">
+    <EmbeddedResource Include="Forms\NewHostWindow.resx">
       <DependentUpon>NewHostWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -1,6 +1,5 @@
 ﻿using HostsEditor.Utils;
 using System;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace HostsEditor
@@ -21,24 +20,10 @@ namespace HostsEditor
 
         private void ShowValidationResult()
         {
-            if (ipValid)
-            {
-                if (hostnameValid)
-                {
-                    LabelStatus.ForeColor = System.Drawing.Color.Green;
-                    LabelStatus.Text = "Input valid";
-                }
-                else
-                {
-                    LabelStatus.ForeColor = System.Drawing.Color.Red;
-                    LabelStatus.Text = "Invalid host";
-                }
-            }
-            else
-            {
-                LabelStatus.ForeColor = System.Drawing.Color.Red;
-                LabelStatus.Text = "Invalid IP";
-            }
+            StringHelper.ValidationResult result = StringHelper.GenerateValidationResult(ipValid, hostnameValid);
+
+            LabelStatus.ForeColor = result.color;
+            LabelStatus.Text = result.output;
         }
 
         private void ButtonAddHost_Click(object sender, EventArgs e)
@@ -59,13 +44,13 @@ namespace HostsEditor
 
         private void InputHostname_TextChanged(object sender, EventArgs e)
         {
-            hostnameValid = Uri.CheckHostName(InputHostname.Text).ToString() == "Dns";
+            hostnameValid = StringHelper.ValidateHostname(InputHostname.Text);
             ShowValidationResult();
         }
 
         private void InputIPAddress_TextChanged(object sender, EventArgs e)
         {
-            ipValid = Uri.CheckHostName(InputIPAddress.Text).ToString() == "IPv4";
+            ipValid = StringHelper.ValidateIPv4(InputIPAddress.Text);
             ShowValidationResult();
         }
     }

@@ -96,7 +96,7 @@
             this.CLabel.Size = new System.Drawing.Size(67, 13);
             this.CLabel.TabIndex = 2;
             this.CLabel.TabStop = true;
-            this.CLabel.Text = "aerouk 2016";
+            this.CLabel.Text = "aerouk 2017";
             this.CLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CLabel_LinkClicked);
             // 
             // ReloadButton
