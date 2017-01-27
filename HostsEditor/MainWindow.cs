@@ -9,12 +9,14 @@ namespace HostsEditor
     {
         public List<HostRow> Hosts { get; set; }
         private DataManager dataManager;
+        private Updater updater;
 
         public MainWindow()
         {
             InitializeComponent();
 
             dataManager = new DataManager();
+            updater = new Updater();
 
             PrepareView();
         }
@@ -106,6 +108,14 @@ namespace HostsEditor
 
             if (exitDialogResult == DialogResult.No)
                 e.Cancel = true;
+        }
+
+        private void CheckForUpdatesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!updater.isCurrent)
+                updater.DisplayUpdateLink();
+            else
+                MessageBox.Show("No update available. You are using the most recent version!");
         }
 
         // ################### //

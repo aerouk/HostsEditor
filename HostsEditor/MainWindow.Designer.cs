@@ -162,6 +162,7 @@
             this.CheckForUpdatesToolStripMenuItem.Name = "CheckForUpdatesToolStripMenuItem";
             this.CheckForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.CheckForUpdatesToolStripMenuItem.Text = "Check for Updates";
+            this.CheckForUpdatesToolStripMenuItem.Click += new System.EventHandler(this.CheckForUpdatesToolStripMenuItem_Click);
             // 
             // AboutToolStripMenuItem
             // 
