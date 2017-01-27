@@ -56,6 +56,11 @@ namespace HostsEditor.Utils
             return true;
         }
 
+        /// <summary>
+        /// Updates a host entry in the `hosts` file.
+        /// </summary>
+        /// <param name="hostRow">The HostRow to update</param>
+        /// <returns>Whether the host was able to be updated or not.</returns>
         public bool UpdateHost(HostRow hostRow)
         {
             try
@@ -74,14 +79,19 @@ namespace HostsEditor.Utils
             return true;
         }
 
+        /// <summary>
+        /// Delete a host entry from a specific line in the `hosts` file.
+        /// </summary>
+        /// <param name="fileRow">Row to delete from the hosts file</param>
+        /// <returns>Whether the host was removed from the file or not.</returns>
         public bool DeleteHost(int fileRow)
         {
             try
             {
-                List<string> LINES = new List<string>(File.ReadAllLines(path));
+                List<string> lines = new List<string>(File.ReadAllLines(path));
 
-                LINES.RemoveAt(fileRow);
-                File.WriteAllLines(path, LINES);
+                lines.RemoveAt(fileRow);
+                File.WriteAllLines(path, lines);
             }
             catch (Exception e)
             {
