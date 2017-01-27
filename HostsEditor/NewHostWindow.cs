@@ -53,7 +53,7 @@ namespace HostsEditor
                     Close();
                 }
                 else
-                    MessageBox.Show("The host file could not be added. Please try again.");
+                    MessageBox.Show("The host entry could not be added. Please try again.");
             }
         }
 
