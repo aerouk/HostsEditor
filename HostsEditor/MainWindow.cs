@@ -86,8 +86,10 @@ namespace HostsEditor
         {
             DataGridView senderGrid = (DataGridView)sender;
             DataGridViewCell cell = senderGrid.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            EditHostWindow editHostWindow = new EditHostWindow(dataManager, cell.RowIndex, Hosts[cell.RowIndex]);
 
-            MessageBox.Show(cell.Value.ToString() + " " + Hosts[cell.RowIndex].FileRow);
+            editHostWindow.ShowDialog(this);
+            ReloadGrid();
         }
 
         private void NewHostButton_Click(object sender, EventArgs e)

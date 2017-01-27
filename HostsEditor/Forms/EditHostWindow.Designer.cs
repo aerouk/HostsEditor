@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             this.LabelIPAddress = new System.Windows.Forms.Label();
             this.EditHostGroupBox = new System.Windows.Forms.GroupBox();
+            this.ButtonDeleteHost = new System.Windows.Forms.Button();
             this.ButtonEditHost = new System.Windows.Forms.Button();
             this.LabelStatus = new System.Windows.Forms.Label();
             this.InputHostname = new System.Windows.Forms.TextBox();
             this.LabelHostname = new System.Windows.Forms.Label();
             this.InputIPAddress = new System.Windows.Forms.TextBox();
             this.InputTimer = new System.Windows.Forms.Timer(this.components);
-            this.ButtonDeleteHost = new System.Windows.Forms.Button();
             this.EditHostGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +66,16 @@
             this.EditHostGroupBox.TabStop = false;
             this.EditHostGroupBox.Text = "Edit a Host";
             // 
+            // ButtonDeleteHost
+            // 
+            this.ButtonDeleteHost.Location = new System.Drawing.Point(175, 73);
+            this.ButtonDeleteHost.Name = "ButtonDeleteHost";
+            this.ButtonDeleteHost.Size = new System.Drawing.Size(99, 23);
+            this.ButtonDeleteHost.TabIndex = 6;
+            this.ButtonDeleteHost.Text = "Delete Host";
+            this.ButtonDeleteHost.UseVisualStyleBackColor = true;
+            this.ButtonDeleteHost.Click += new System.EventHandler(this.ButtonDeleteHost_Click);
+            // 
             // ButtonEditHost
             // 
             this.ButtonEditHost.Location = new System.Drawing.Point(70, 74);
@@ -74,6 +84,7 @@
             this.ButtonEditHost.TabIndex = 5;
             this.ButtonEditHost.Text = "Submit";
             this.ButtonEditHost.UseVisualStyleBackColor = true;
+            this.ButtonEditHost.Click += new System.EventHandler(this.ButtonEditHost_Click);
             // 
             // LabelStatus
             // 
@@ -90,6 +101,7 @@
             this.InputHostname.Name = "InputHostname";
             this.InputHostname.Size = new System.Drawing.Size(230, 20);
             this.InputHostname.TabIndex = 3;
+            this.InputHostname.TextChanged += new System.EventHandler(this.InputHostname_TextChanged);
             // 
             // LabelHostname
             // 
@@ -106,15 +118,7 @@
             this.InputIPAddress.Name = "InputIPAddress";
             this.InputIPAddress.Size = new System.Drawing.Size(122, 20);
             this.InputIPAddress.TabIndex = 1;
-            // 
-            // ButtonDeleteHost
-            // 
-            this.ButtonDeleteHost.Location = new System.Drawing.Point(175, 73);
-            this.ButtonDeleteHost.Name = "ButtonDeleteHost";
-            this.ButtonDeleteHost.Size = new System.Drawing.Size(99, 23);
-            this.ButtonDeleteHost.TabIndex = 6;
-            this.ButtonDeleteHost.Text = "Delete Host";
-            this.ButtonDeleteHost.UseVisualStyleBackColor = true;
+            this.InputIPAddress.TextChanged += new System.EventHandler(this.InputIPAddress_TextChanged);
             // 
             // EditHostWindow
             // 
@@ -122,8 +126,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(331, 127);
             this.Controls.Add(this.EditHostGroupBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "EditHostWindow";
-            this.Text = "EditHostWindow";
+            this.Text = "Hosts File Editor";
             this.EditHostGroupBox.ResumeLayout(false);
             this.EditHostGroupBox.PerformLayout();
             this.ResumeLayout(false);

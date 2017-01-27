@@ -55,5 +55,41 @@ namespace HostsEditor.Utils
 
             return true;
         }
+
+        public bool UpdateHost(HostRow hostRow)
+        {
+            try
+            {
+                string[] lines = File.ReadAllLines(path);
+
+                lines[hostRow.FileRow] = $"{hostRow.IP} {hostRow.Host}" + Environment.NewLine;
+                File.WriteAllLines(path, lines);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+                return false;
+            }
+
+            return true;
+        }
+
+        public bool DeleteHost(int fileRow)
+        {
+            try
+            {
+                List<string> LINES = new List<string>(File.ReadAllLines(path));
+
+                LINES.RemoveAt(fileRow);
+                File.WriteAllLines(path, LINES);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+                return false;
+            }
+
+            return true;
+        }
     }
 }
