@@ -4,6 +4,9 @@ using System.Windows.Forms;
 
 namespace HostsEditor
 {
+    /// <summary>
+    /// Represents the dialog box for editing/deleting host entries.
+    /// </summary>
     public partial class EditHostWindow : Form
     {
         private bool ipValid, hostnameValid;
@@ -11,6 +14,12 @@ namespace HostsEditor
         private HostRow hostRow;
         private int rowIndex;
 
+        /// <summary>
+        /// Creates a new dialog using the associated data manager.
+        /// </summary>
+        /// <param name="dataManager">Data manager associated with the hosts file</param>
+        /// <param name="rowIndex">The row index where the host entry is from</param>
+        /// <param name="hostRow">The host row data relative to the row index</param>
         public EditHostWindow(DataManager dataManager, int rowIndex, HostRow hostRow)
         {
             InitializeComponent();
@@ -27,6 +36,9 @@ namespace HostsEditor
             ShowValidationResult();
         }
 
+        /// <summary>
+        /// Shows the validation result of the entered IP address and hostname.
+        /// </summary>
         private void ShowValidationResult()
         {
             StringHelper.ValidationResult result = StringHelper.GenerateValidationResult(ipValid, hostnameValid);

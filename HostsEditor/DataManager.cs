@@ -13,6 +13,9 @@ namespace HostsEditor.Utils
         public List<HostRow> Hosts { get; set; }
         public string path = Environment.SystemDirectory + @"\drivers\etc\hosts";
 
+        /// <summary>
+        /// Creates a new data manager and sets up the hosts list for data entry.
+        /// </summary>
         public DataManager()
         {
             Hosts = new List<HostRow>();
