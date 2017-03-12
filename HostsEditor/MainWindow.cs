@@ -112,7 +112,7 @@ namespace HostsEditor
 
         private void CheckForUpdatesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!updater.isCurrent)
+            if (!updater.IsCurrent)
                 updater.DisplayUpdateLink();
             else
                 MessageBox.Show("No update available. You are using the most recent version!");

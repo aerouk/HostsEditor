@@ -10,8 +10,8 @@ namespace HostsEditor
     /// </summary>
     class Updater
     {
-        public string version { get; set; }
-        public bool isCurrent { get; set; }
+        public string Version { get; set; }
+        public bool IsCurrent { get; set; }
         private JObject json;
 
         /// <summary>
@@ -19,11 +19,11 @@ namespace HostsEditor
         /// </summary>
         public Updater()
         {
-            version = Application.ProductVersion;
+            Version = Application.ProductVersion;
             json = getLatestReleaseInfo();
-            isCurrent = IsApplicationCurrent();
+            IsCurrent = IsApplicationCurrent();
 
-            if (!isCurrent)
+            if (!IsCurrent)
                 DisplayUpdateLink();
         }
 
@@ -35,7 +35,7 @@ namespace HostsEditor
         {
             WebClient client = new WebClient();
 
-            client.Headers.Add("User-agent", $"HostsEditor {version} (https://github.com/aerouk/HostsEditor)");
+            client.Headers.Add("User-agent", $"HostsEditor {Version} (https://github.com/aerouk/HostsEditor)");
 
             var json = client.DownloadString("http://api.github.com/repos/aerouk/HostsEditor/releases/latest");
 
@@ -48,7 +48,7 @@ namespace HostsEditor
         /// <returns>Whether the application is up-to-date</returns>
         private bool IsApplicationCurrent()
         {
-            Version currentVer = new Version(version);
+            Version currentVer = new Version(Version);
             Version onlineVer = new Version(json["tag_name"].ToString());
 
             return currentVer.CompareTo(onlineVer) >= 0;
