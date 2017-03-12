@@ -89,6 +89,9 @@
       <DependentUpon>EditHostWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="HostRow.cs" />
+    <Compile Include="LimitableWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>

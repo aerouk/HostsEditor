@@ -33,7 +33,7 @@ namespace HostsEditor
         /// <returns>JObject containins output from github releases page</returns>
         private JObject getLatestReleaseInfo()
         {
-            WebClient client = new WebClient();
+            LimitableWebClient client = new LimitableWebClient { Timeout = 5000 }; // WebClient with timeout of 5 seconds
 
             client.Headers.Add("User-agent", $"HostsEditor {Version} (https://github.com/aerouk/HostsEditor)");
 
