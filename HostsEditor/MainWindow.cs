@@ -112,6 +112,13 @@ namespace HostsEditor
                 MessageBox.Show("No update available. You are using the most recent version!");
         }
 
+        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox aboutBox = new AboutBox();
+
+            aboutBox.ShowDialog();
+        }
+
         // ################### //
     }
 }

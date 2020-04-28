@@ -60,7 +60,7 @@ namespace HostsEditor
 
         private void InputIPAddress_TextChanged(object sender, EventArgs e)
         {
-            ipValid = StringHelper.ValidateIPv4(InputIPAddress.Text);
+            ipValid = StringHelper.ValidateIP(InputIPAddress.Text);
             ShowValidationResult();
         }
     }

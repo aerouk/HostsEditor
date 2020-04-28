@@ -61,10 +61,12 @@
             this.host});
             this.HostsGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.HostsGrid.Location = new System.Drawing.Point(13, 27);
+            this.HostsGrid.MultiSelect = false;
             this.HostsGrid.Name = "HostsGrid";
             this.HostsGrid.RowHeadersVisible = false;
+            this.HostsGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.HostsGrid.Size = new System.Drawing.Size(609, 360);
-            this.HostsGrid.TabIndex = 0;
+            this.HostsGrid.TabIndex = 3;
             this.HostsGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.HostsGrid_CellDoubleClick);
             // 
             // ip
@@ -96,8 +98,7 @@
             this.CLabel.Location = new System.Drawing.Point(18, 397);
             this.CLabel.Name = "CLabel";
             this.CLabel.Size = new System.Drawing.Size(67, 13);
-            this.CLabel.TabIndex = 2;
-            this.CLabel.TabStop = true;
+            this.CLabel.TabIndex = 4;
             this.CLabel.Text = "aerouk 2020";
             this.CLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CLabel_LinkClicked);
             // 
@@ -107,7 +108,7 @@
             this.ReloadButton.Location = new System.Drawing.Point(308, 393);
             this.ReloadButton.Name = "ReloadButton";
             this.ReloadButton.Size = new System.Drawing.Size(103, 23);
-            this.ReloadButton.TabIndex = 3;
+            this.ReloadButton.TabIndex = 2;
             this.ReloadButton.Text = "Reload Hosts";
             this.ReloadButton.UseVisualStyleBackColor = true;
             this.ReloadButton.Click += new System.EventHandler(this.ReloadButton_Click);
@@ -118,9 +119,9 @@
             this.CountLabel.AutoSize = true;
             this.CountLabel.Location = new System.Drawing.Point(418, 397);
             this.CountLabel.Name = "CountLabel";
-            this.CountLabel.Size = new System.Drawing.Size(85, 13);
+            this.CountLabel.Size = new System.Drawing.Size(106, 13);
             this.CountLabel.TabIndex = 4;
-            this.CountLabel.Text = "Pending count...";
+            this.CountLabel.Text = "Hosts entries loaded:";
             // 
             // MenuStrip1
             // 
@@ -144,7 +145,8 @@
             // ExitToolStripMenuItem
             // 
             this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
-            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
+            this.ExitToolStripMenuItem.ShortcutKeyDisplayString = "Alt+F4";
+            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ExitToolStripMenuItem.Text = "Exit";
             this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -160,15 +162,16 @@
             // CheckForUpdatesToolStripMenuItem
             // 
             this.CheckForUpdatesToolStripMenuItem.Name = "CheckForUpdatesToolStripMenuItem";
-            this.CheckForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.CheckForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.CheckForUpdatesToolStripMenuItem.Text = "Check for Updates";
             this.CheckForUpdatesToolStripMenuItem.Click += new System.EventHandler(this.CheckForUpdatesToolStripMenuItem_Click);
             // 
             // AboutToolStripMenuItem
             // 
             this.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem";
-            this.AboutToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.AboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.AboutToolStripMenuItem.Text = "About";
+            this.AboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
             // NewHostButton
             // 
@@ -176,7 +179,7 @@
             this.NewHostButton.Location = new System.Drawing.Point(91, 393);
             this.NewHostButton.Name = "NewHostButton";
             this.NewHostButton.Size = new System.Drawing.Size(103, 23);
-            this.NewHostButton.TabIndex = 6;
+            this.NewHostButton.TabIndex = 0;
             this.NewHostButton.Text = "Add New Host";
             this.NewHostButton.UseVisualStyleBackColor = true;
             this.NewHostButton.Click += new System.EventHandler(this.NewHostButton_Click);

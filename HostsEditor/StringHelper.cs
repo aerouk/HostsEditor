@@ -29,13 +29,14 @@ namespace HostsEditor
         }
 
         /// <summary>
-        /// Validates an input against the correct format for an IPv4 address.
+        /// Validates an input against the correct format for an IPv4/IPv6 address.
         /// </summary>
-        /// <param name="input">Input to validate as an IPv4 address</param>
-        /// <returns>Whether the input is a valid IPv4 address</returns>
-        public static bool ValidateIPv4(string input)
+        /// <param name="input">Input to validate as an IP address</param>
+        /// <returns>Whether the input is a valid IP address</returns>
+        public static bool ValidateIP(string input)
         {
-            return Uri.CheckHostName(input).ToString() == "IPv4";
+            return Uri.CheckHostName(input).ToString() == "IPv4"
+                || Uri.CheckHostName(input).ToString() == "IPv6";
         }
 
         /// <summary>

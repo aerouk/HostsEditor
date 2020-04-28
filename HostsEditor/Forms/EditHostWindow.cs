@@ -54,12 +54,9 @@ namespace HostsEditor
                 HostRow newHostRow = new HostRow(hostRow.FileRow, InputIPAddress.Text, InputHostname.Text);
 
                 if (dataManager.UpdateHost(newHostRow))
-                {
-                    MessageBox.Show("The host was successfully updated.");
                     Close();
-                }
                 else
-                    MessageBox.Show("The host entry could not be updated. Please try again.");
+                    MessageBox.Show("The host entry could not be updated. Please correct the input and try again.");
             }
         }
 
@@ -70,12 +67,9 @@ namespace HostsEditor
             if (exitDialogResult == DialogResult.Yes)
             {
                 if (dataManager.DeleteHost(hostRow.FileRow))
-                {
-                    MessageBox.Show("The host was successfully deleted.");
                     Close();
-                }
                 else
-                    MessageBox.Show("The host entry could not be deleted. Please try again.");
+                    MessageBox.Show("The host entry could not be deleted. Please correct the input and try again.");
             }
         }
 
@@ -87,7 +81,7 @@ namespace HostsEditor
 
         private void InputIPAddress_TextChanged(object sender, EventArgs e)
         {
-            ipValid = StringHelper.ValidateIPv4(InputIPAddress.Text);
+            ipValid = StringHelper.ValidateIP(InputIPAddress.Text);
             ShowValidationResult();
         }
     }
