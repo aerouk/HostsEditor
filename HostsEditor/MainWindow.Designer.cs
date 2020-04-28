@@ -98,7 +98,7 @@
             this.CLabel.Size = new System.Drawing.Size(67, 13);
             this.CLabel.TabIndex = 2;
             this.CLabel.TabStop = true;
-            this.CLabel.Text = "aerouk 2017";
+            this.CLabel.Text = "aerouk 2020";
             this.CLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CLabel_LinkClicked);
             // 
             // ReloadButton
@@ -144,7 +144,7 @@
             // ExitToolStripMenuItem
             // 
             this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
-            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
             this.ExitToolStripMenuItem.Text = "Exit";
             this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -197,7 +197,6 @@
             this.MinimumSize = new System.Drawing.Size(650, 463);
             this.Name = "MainWindow";
             this.Text = "Hosts File Editor";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.HostsGrid)).EndInit();
             this.MenuStrip1.ResumeLayout(false);
             this.MenuStrip1.PerformLayout();

@@ -16,7 +16,6 @@ namespace HostsEditor
             InitializeComponent();
 
             dataManager = new DataManager();
-            updater = new Updater();
 
             PrepareView();
         }
@@ -102,16 +101,11 @@ namespace HostsEditor
             ReloadGrid(); // reload grid after dialog is closed
         }
 
-        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult exitDialogResult = MessageBox.Show("Are you sure you would like to exit?", "Exit application", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-
-            if (exitDialogResult == DialogResult.No)
-                e.Cancel = true;
-        }
-
         private void CheckForUpdatesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (updater == null)
+                updater = new Updater();
+
             if (!updater.IsCurrent)
                 updater.DisplayUpdateLink();
             else

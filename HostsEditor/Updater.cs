@@ -35,9 +35,12 @@ namespace HostsEditor
         {
             LimitableWebClient client = new LimitableWebClient { Timeout = 5000 }; // WebClient with timeout of 5 seconds
 
+            ServicePointManager.Expect100Continue = true;
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
             client.Headers.Add("User-agent", $"HostsEditor {Version} (https://github.com/aerouk/HostsEditor)");
 
-            var json = client.DownloadString("http://api.github.com/repos/aerouk/HostsEditor/releases/latest");
+            var json = client.DownloadString("https://api.github.com/repos/aerouk/HostsEditor/releases/latest");
 
             return JObject.Parse(json);
         }
