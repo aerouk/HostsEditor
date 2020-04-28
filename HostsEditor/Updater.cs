@@ -49,7 +49,7 @@ namespace HostsEditor
         private bool IsApplicationCurrent()
         {
             Version currentVer = new Version(Version);
-            Version onlineVer = new Version("0." + json["tag_name"].ToString());
+            Version onlineVer = new Version(json["tag_name"].ToString());
 
             return currentVer.CompareTo(onlineVer) >= 0;
         }
