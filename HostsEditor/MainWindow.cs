@@ -42,7 +42,7 @@ namespace HostsEditor
         {
             foreach (HostRow hostRow in Hosts)
             {
-                string[] entry = {hostRow.IP, hostRow.Host};
+                string[] entry = { hostRow.IP, hostRow.Host };
 
                 HostsGrid.Rows.Add(entry);
             }

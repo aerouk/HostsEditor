@@ -129,6 +129,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "EditHostWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Hosts File Editor";
             this.EditHostGroupBox.ResumeLayout(false);
             this.EditHostGroupBox.PerformLayout();
