@@ -22,9 +22,6 @@ namespace HostsEditor
             Version = Application.ProductVersion;
             json = getLatestReleaseInfo();
             IsCurrent = IsApplicationCurrent();
-
-            if (!IsCurrent)
-                DisplayUpdateLink();
         }
 
         /// <summary>
