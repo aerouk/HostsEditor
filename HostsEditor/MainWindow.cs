@@ -30,7 +30,7 @@ namespace HostsEditor
             dataManager.LoadHostsFromFile();
 
             Hosts = dataManager.Hosts;
-            CountLabel.Text = "Host entries loaded: " + Hosts.Count.ToString();
+            HostCount.Text = "Hosts Loaded: " + Hosts.Count.ToString();
 
             PopulateGrid();
         }
@@ -73,11 +73,6 @@ namespace HostsEditor
             ReloadGrid();
         }
 
-        private void CLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://github.com/aerouk/HostsEditor");
-        }
-
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
@@ -117,6 +112,14 @@ namespace HostsEditor
             AboutBox aboutBox = new AboutBox();
 
             aboutBox.ShowDialog();
+        }
+
+        private void addHostToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewHostWindow newHostWindow = new NewHostWindow(dataManager);
+
+            newHostWindow.ShowDialog(this);
+            ReloadGrid(); // reload grid after dialog is closed
         }
 
         // ################### //
