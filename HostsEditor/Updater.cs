@@ -20,7 +20,7 @@ namespace HostsEditor
         public Updater()
         {
             Version = Application.ProductVersion;
-            json = getLatestReleaseInfo();
+            json = GetLatestReleaseInfo();
             IsCurrent = IsApplicationCurrent();
         }
 
@@ -28,7 +28,7 @@ namespace HostsEditor
         /// Retrieves the information pertaining to the most recent release of the program from the GitHub repo.
         /// </summary>
         /// <returns>JObject containins output from github releases page</returns>
-        private JObject getLatestReleaseInfo()
+        private JObject GetLatestReleaseInfo()
         {
             LimitableWebClient client = new LimitableWebClient { Timeout = 5000 }; // WebClient with timeout of 5 seconds
 
