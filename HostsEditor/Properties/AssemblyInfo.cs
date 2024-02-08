@@ -9,9 +9,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("HostsEditor")]
 [assembly: AssemblyDescription("Edit the contents of the Windows(r) hosts file in a GUI")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Aero UK")]
+[assembly: AssemblyCompany("aerouk")]
 [assembly: AssemblyProduct("HostsEditor")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyCopyright("Copyright © 2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -33,7 +33,7 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.3.2")]
-[assembly: AssemblyFileVersion("1.3.2")]
+[assembly: AssemblyVersion("1.3.3")]
+[assembly: AssemblyFileVersion("1.3.3")]
 [assembly: NeutralResourcesLanguage("en")]
 
